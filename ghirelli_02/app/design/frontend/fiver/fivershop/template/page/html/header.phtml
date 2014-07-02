@@ -26,6 +26,7 @@
 /**
  * @var Mage_Page_Block_Html_Header $this
  */
+/*
  $storeId = Mage::app()->getStore()->getStoreId();
  $header_get = $_GET['header'];
  if($header_get) {
@@ -38,6 +39,7 @@
  }else{
 	 include_once('headers/default.phtml');
  }
+*/
 ?>
 
 
@@ -46,20 +48,42 @@ $homepage_gallery_status		=	Mage::getStoreConfig('themeoptions_homepage/homepage
 $routeName = Mage::app()->getRequest()->getRouteName();  
 $identifier = Mage::getSingleton('cms/page')->getIdentifier();  
 ?>
-<?php
-if($routeName == 'cms' && $identifier == Mage::getStoreConfig('web/default/cms_home_page')):
-	echo $this->getChildHtml('revslideshow.homepage');
-?>
-	<?php if ($block_home_content_top = $this->getLayout()->createBlock('cms/block')->setBlockId('block_home_content_top')->toHtml()): ?>
-	<div class="block-home-content-top-container">
-		<div class="container">
-			<?php echo $block_home_content_top;?>
-		</div>
-	</div>
-	<?php endif;?>
 
-<?php
-endif; 
-?>
+
+<div>
+
+    <div style="position: absolute; z-index: 100; opacity: 0.7;width: 100%">
+        <?php
+        $storeId = Mage::app()->getStore()->getStoreId();
+        $header_get = $_GET['header'];
+        if($header_get) {
+            $custom_header = $header_get;
+        }else{
+            $custom_header = Mage::getStoreConfig('themeoptions_general/general_options/custom_header', $storeId);
+        }
+        if($custom_header) {
+            include_once('headers/'.$custom_header.'.phtml');
+        }else{
+            include_once('headers/default.phtml');
+        }
+        ?>
+    </div>
+
+    <div>
+        <?php if($routeName == 'cms' && $identifier == Mage::getStoreConfig('web/default/cms_home_page')):
+        echo $this->getChildHtml('revslideshow.homepage'); ?>
+
+            <!--
+            <?php /* if ($block_home_content_top = $this->getLayout()->createBlock('cms/block')->setBlockId('block_home_content_top')->toHtml()):*/ ?>
+            <div class="block-home-content-top-container">
+                <div class="container">
+                    <?php /* echo $block_home_content_top; */ ?>
+                </div>
+            </div>
+            <?php /*endif;*/?>
+            -->
+        <?php endif;?>
+    </div>
+</div>
 
 

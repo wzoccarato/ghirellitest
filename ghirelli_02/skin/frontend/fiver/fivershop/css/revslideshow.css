@@ -8,13 +8,13 @@
     overflow: hidden;
     padding: 0;
     position: relative;
-    max-height: 660px !important;
+    max-height: 860px !important;
     width: 100% !important;
 }
 .fullwidthbanner-container .fullwidthabnner {
     position: relative;
     width: 100% !important;
-    max-height: 660px !important;
+    max-height: 860px !important;
 }
 .fixedbanner-container {
     margin-left: auto;
@@ -45,7 +45,6 @@
   /*	THE MEDIA CHOOSER TO SET DIFFERENT SIZES OF THE CONTAINER DEPENDING ON THE SCREEN SIZE    */
    @media only screen and (min-width: 768px) and (max-width: 959px) {
  		  .responsivebanner-container, .responsivebanner			{	width:760px; height:349px;}
-
 
 
 

@@ -96,12 +96,14 @@ Default layout, loads most of the pages
                 <block type="page/template_links" name="top.links" as="topLinks"/>
                 <block type="directory/currency" name="currency" as="currency" template="directory/currency.phtml"/>
                 <block type="page/switch" name="store_language" as="store_language" template="page/switch/languages.phtml"/>
-                <block type="core/store_switcher" name="store_switcher" as="store_switcher" template="page/switch/stores.phtml"/> 
+                <block type="core/store_switcher" name="store_switcher" as="store_switcher" template="page/switch/stores.phtml"/>
+
                 <block type="core/text_list" name="top.menu" as="topMenu" translate="label">
                     <label>Navigation Bar</label>
-                   <!-- <block type="page/html_topmenu" name="catalog.topnav" template="page/html/topmenu.phtml"/> -->
+                    <!-- <block type="page/html_topmenu" name="catalog.topnav" template="page/html/topmenu.phtml"/> -->
                     <block type="megamenu/mainmenu_menu" name="catalog.topnav.menu" template="fiver/mainmenu/top.phtml"/>
                 </block>
+
                 <block type="catalog/product_compare_sidebar" name="compare_dropdown" template="catalog/product/compare/dropdown.phtml"/>
                 <block type="catalog/product_new" name="home.gallery" alias="home_gallery" template="page/html/home-gallery.phtml" />
                 <block type="catalog/product_new" name="home.content" alias="home_content" template="page/html/home-content.phtml" />
