@@ -70,22 +70,34 @@ if ($block_top_bar_left ||  $block_top_bar_center || $block_top_bar_right):
     	</div>
     </div>
 </div>
-<div class="header-container" style="opacity:0.4">
+<div class="header-container" style="opacity: 0.4">
     <div class="header container">
     	<div class="i-header-content">
 	    	<div class="row">
-	    		<div class="header-center">
-		 			<?php if ($this->getIsHomePage()):?>
-		        		<h1 class="logo"><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h1>
-		        	<?php else:?>
-		        		<h1 class="logo"><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h1>
-		        	<?php endif?>
-	        	</div>
 			</div>
 		</div>
         <?php echo $this->getChildHtml('topContainer'); ?>
     </div>
 </div>
+
+
+<div class="header-center">
+    <?php if ($this->getIsHomePage()):?>
+        <div>
+            <h1 class="logo"><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h1>
+        </div>
+    <?php else:?>
+        <div>
+            <h1 class="logo"><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h1>
+        </div>
+    <?php endif?>
+</div>
+
+
+
+
+
+
 <div class="main-navigation-container">
 <div class="main-navigation container">
 	    <?php echo $this->getChildHtml('topMenu') ?>
