@@ -6,7 +6,7 @@
     margin-left: 50px;
 }
 .header-container .fiver-main-menu  ul.megamenu li.home a {
-	padding-left: 0px !important;
+	padding-left: 0 !important;
 }
 .fiver-main-menu {
 	position: relative;
@@ -15,7 +15,7 @@
 .fiver-navigation #fiver-nav {
     height: 50px;
     padding: 0;
-    z-index: 997; */
+    z-index: 997;
 }
 .header-container-1 .fiver-navigation #fiver-nav {
     display: block;
@@ -63,8 +63,8 @@
     padding: 9px 15px;
     position: relative;
     text-decoration: none;
-    text-transform: uppercase;/* 
-    z-index: 99; */
+    text-transform: uppercase;
+    /* z-index: 99; */
 	-webkit-transition: color 450ms ease-in-out 0s, background-color 50ms ease-in-out 0s;
 	transition: color 450ms ease-in-out 0s, background-color 50ms ease-in-out 0s;
 }
@@ -86,7 +86,7 @@
 }
 #fiver-nav li.active a.level-top,
 #fiver-nav li:hover a.level-top {
-    background-color: none;
+    /*background-color: none;*/
     color: #363636;
 }
 #fiver-nav li.active a {
@@ -310,7 +310,6 @@ div.shown-sub {
     line-height: normal;
     margin: 0;
     outline: medium none;
-    padding: 0;
     text-transform: capitalize;
     padding: 12px 15px !important;
 }
@@ -523,10 +522,10 @@ div.shown-sub {
 
 /* Menu */
 .navbar{border:none; text-align: left;}
-.navbar-inverse{background-color:#fff !important; border-color:none !important;}
+.navbar-inverse{background-color:#fff !important; /*border-color:none !important;*/}
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form{ border: medium none;}
 .bs-navbar-collapse .nav-accordion{background-color:#F2F2F2 !important;border-top: 1px solid #FFFFFF;margin-top: 1px;}
-.navbar-inverse .bs-navbar-collapse ul.nav-accordion li a{color:##333333;padding-left: 10px;margin-bottom: 1px; text-transform: uppercase;font-size:14px;}
+.navbar-inverse .bs-navbar-collapse ul.nav-accordion li a{color:#333333;padding-left: 10px;margin-bottom: 1px; text-transform: uppercase;font-size:14px;}
 .navbar-inverse .bs-navbar-collapse ul.nav-accordion li a:hover{color:#fff;}
 .navbar-inverse .bs-navbar-collapse ul.nav-accordion li{ line-height: 49px;}
 .navbar-inverse .bs-navbar-collapse ul.nav-accordion li a{ border-bottom: 1px solid #FFFFFF;}
@@ -548,7 +547,7 @@ div.shown-sub {
 .navbar-inverse .navbar-toggle:focus{ background-color: #FFF !important; }
 .navbar-inverse .navbar-toggle:hover{ background-color:#FFF !important;}
 .navbar-header {
-    background-color: none !important;
+    /*background-color: none !important;*/
     background-image: none !important;
     border: 0 none !important;
     border-radius: 0 0 0 0 !important;

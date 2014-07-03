@@ -51,8 +51,10 @@ $identifier = Mage::getSingleton('cms/page')->getIdentifier();
 
 
 <div>
-
-    <div style="position: absolute; z-index: 100; opacity: 0.7;width: 100%">
+    <!--
+    posiziona l'header, in modo che sia sempitrasparente, in sovrapposizione con lo slideshow
+    -->
+    <div style="position: absolute; z-index: 100; width: 100%">
         <?php
         $storeId = Mage::app()->getStore()->getStoreId();
         $header_get = $_GET['header'];
